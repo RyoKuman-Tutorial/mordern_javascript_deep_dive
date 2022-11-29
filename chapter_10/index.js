@@ -15,3 +15,11 @@ var obj1 = {
 // { props-no1 : 1 , props-no2 : 2, props-no3 : 3 }
 
 console.log(obj1); // { props-no1 : 1 , props-no2 : 2, props-no3 : 3 }
+
+var obj2 = {
+  hello(str) {
+    console.log("hello" + str);
+  },
+};
+
+obj2.hello("kim"); // hello kim

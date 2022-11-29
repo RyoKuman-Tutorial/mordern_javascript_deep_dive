@@ -2,7 +2,7 @@
 
 ![다운로드](https://cdn.inflearn.com/public/courses/327974/cover/3b014384-8b3e-4f66-a4de-a94ffff11f58/Modern%20Javascript%20Deep%20Dive.png)
 위 레퍼지토리는 모던 자바스크립트 deep dive 를 공부하면서,<br/>
-6장부터 49장까지의 각종 예제 및 개념을 정리한, 레퍼지토리입니다.
+어려웠던 예제 및 개념을 정리한, 레퍼지토리입니다.
 
 ## CHAPTERS
 

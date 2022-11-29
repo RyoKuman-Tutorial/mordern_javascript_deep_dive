@@ -20,8 +20,24 @@ obj1.age = 10; // obj1 에 저장된 주솟값에 해당하는, 객체에 age �
 console.log(obj1);
 console.log(obj2); // obj1, obj2 둘 다 age 가 추가되었음을 확인 할 수 있다.
 
-obj3 = { ...obj1 }; // 올바른 object 복제 방법,
+obj3 = { ...obj1 }; // object 복제
 obj1.age = 15;
 
 console.log(obj1);
 console.log(obj3); // obj1 만 age 가 변경되었음을 확인 할 수 있다.
+
+var obj4 = {
+  name: "shallow",
+  obj: { x: 1 },
+};
+
+var obj5 = { ...obj4 }; // obj4 를 복사하여 obj5 를 복사
+
+obj4.obj.x = 10; // obj4 의 프로퍼티인 obj의 프로퍼티, x 를 변경
+
+console.log(obj4);
+console.log(obj5); // 둘 다 , obj.x 가 변경됨을 확인 할 수 있다.
+// {...obj} 만으론 모든 것을 복제하는것이 불가능하다.
+// 이처럼 한단계 까지만 복사하는것을 얕은 복사, ( shallow copy )
+// 객체에 중첩되어있는 객체까지 모두 복사하는것을 깊은 복사라고 한다. ( deep copy )
+// deep copy 는 lodash 를 이용하여 가능하다.

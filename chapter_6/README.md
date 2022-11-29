@@ -9,4 +9,4 @@
 ## OVERVIEW
 
 - ### [NUMBUR](./number/README.md)
-- ### [STRING](./string/README.md)
+- ### [STRING](./string/index.js)

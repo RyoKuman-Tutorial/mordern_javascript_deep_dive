@@ -20,3 +20,8 @@ console.log(obj?.value); // obj은 falsy 값이므로, undefined가 그대로 re
 console.log(obj1?.value); // obj1은 falsy 값이므로,  undefined가 그대로 return
 console.log(obj2?.value); // obj2는 falsy 값이 아니므로, obj2 의 value 값인 hello 를 return
 console.log(obj3?.value); // obj3는 falsy 값이 아니므로, obj3 의 value 값인 undefined 를 return
+
+console.log(null ?? "hello1"); // 좌항이 null 이므로 hello1를 return
+console.log(undefined ?? "hello2"); // 좌항이 undeifned 이므로 hello1를 return
+console.log("" ?? "hello3"); // 좌항이 falsy 이지만, null 과 undefined 가 아니므로 "" 를 return
+console.log(NaN ?? "hello3"); // 좌항이 falsy 이지만, null 과 undefined 가 아니므로 NaN 를 return

@@ -25,3 +25,6 @@ var NaN1 = NaN;
 var NaN2 = NaN;
 console.log(NaN1 === NaN2); // false
 console.log(isNaN(NaN1)); // NaN을 확인할 수 있는 유일한 방법은 NaN 뿐이다.
+
+console.log(2 ** 3); // 2의 3승이므로 8이 출력된다.
+console.log(3 ** 3); // 3의 3승이므로 27이 출력된다.

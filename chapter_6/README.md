@@ -10,3 +10,4 @@
 
 - ### [NUMBUR](./number/README.md)
 - ### [STRING](./string/index.js)
+- ### [BOOLEAN, UNDEFINED , NULL, SYMBOL](./boolean%2C%20undefined%2C%20null%2C%20symbol/README.md)

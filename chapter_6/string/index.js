@@ -5,3 +5,9 @@ var str3 = `STRING`;
 console.log(typeof str1);
 console.log(typeof str2);
 console.log(typeof str3); // 모두 string
+
+var str4 = 'my "name" is yong ';
+var str5 = "my 'name' is yong ";
+
+console.log(str4); // '' 안에선 "" 가 문자열로 인식됨
+console.log(str5); // "" 안에선 '' 가 문자열로 인식됨

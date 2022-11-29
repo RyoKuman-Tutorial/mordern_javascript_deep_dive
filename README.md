@@ -7,9 +7,8 @@
 ## CHAPTERS
 
 - [6장](./chapter_6/README.md)
-- [7장]()
-- [8장]()
-- [9장]()
+- [7장](./chapter_7/README.md)
+- [9장](./chapter_9/index.js)
 - [10장]()
 - [11장]()
 - [12장]()

@@ -167,3 +167,38 @@ const Animal2 = (function () {
 const shark = new Animal2("shark");
 shark.sayHello();
 console.log(Object.getPrototypeOf(shark).constructor); // 생성자가 Animal2 로 뜸
+
+/* -------------------------------------------- change prototype by instance -------------------------------------------- */
+
+function Planet1(name) {
+  this.name = name;
+}
+
+const jupiter = new Planet1("jupiter");
+
+const NewPlanet1 = {
+  sayHello() {
+    console.log(`this planet's name is ${this.name}`);
+  },
+};
+
+Object.setPrototypeOf(jupiter, NewPlanet1); // prototype을 교체
+jupiter.sayHello();
+console.log(Object.getPrototypeOf(jupiter).constructor); // 생성자가 Object 임을 확인 가능
+
+function Planet2(name) {
+  this.name = name;
+}
+
+const pluto = new Planet2("pluto");
+
+const NewPlanet2 = {
+  constructor: Planet2,
+  sayHello() {
+    console.log(`this planet's name is ${this.name}`);
+  },
+};
+
+Object.setPrototypeOf(pluto, NewPlanet2); // prototype을 교체
+pluto.sayHello();
+console.log(Object.getPrototypeOf(pluto).constructor); // 생성자가 NewPlanet2 임을 확인 가능

@@ -1,3 +1,11 @@
+function constructor(name) {
+  this.name = name;
+  this.gender = "male";
+}
+
+const nick = new constructor("nick");
+const james = new constructor("james");
+
 console.log(nick.print === james.print); // true, prototype 의 function 이므로 같음
 console.log(nick.genderChange === james.genderChange); // true, prototype 의 function 이므로 같음
 

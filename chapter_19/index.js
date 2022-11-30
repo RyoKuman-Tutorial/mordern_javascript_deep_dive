@@ -128,3 +128,42 @@ Person.prototype.sayHello = function () {
 
 my1.sayHello();
 my2.sayHello(); // 잘 작동함
+
+/* -------------------------------------------- change prototype by constructor -------------------------------------------- */
+
+const Animal1 = (function () {
+  function Animal1(name) {
+    this.name = name;
+  }
+
+  Animal1.prototype = {
+    sayHello() {
+      console.log(`Hi I am ${this.name}`);
+    },
+  }; // 프로토타입을 아예 바꿔버리는 식, 이러면 생성자와 프로퍼티 간의 연결이 끊긴다.
+
+  return Animal1;
+})();
+
+const dolphin = new Animal1("dolphin");
+dolphin.sayHello();
+console.log(Object.getPrototypeOf(dolphin).constructor); // 생성자가 Object 로 뜸
+
+const Animal2 = (function () {
+  function Animal2(name) {
+    this.name = name;
+  }
+
+  Animal2.prototype = {
+    constructor: Animal2,
+    sayHello() {
+      console.log(`Hi I am ${this.name}`);
+    },
+  }; // constructor 를 선언해줌으로써 프로퍼티와 생성자 간의 연결을 유지
+
+  return Animal2;
+})();
+
+const shark = new Animal2("shark");
+shark.sayHello();
+console.log(Object.getPrototypeOf(shark).constructor); // 생성자가 Animal2 로 뜸

@@ -24,3 +24,13 @@ const func3 = (value) => {
 
 func3(1);
 ```
+
+## IFE
+
+() 를 이용하면 선언과 동시에 함수를 실행시킬 수 있다.
+
+```js
+(function hello() {
+  console.log("hello");
+}()); // 곧바로 실행
+```

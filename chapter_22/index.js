@@ -33,3 +33,23 @@ function tempFunc() {
   console.log(this); // 일반함수 내부에서의 this 는 window 를 가르킨다.
 }
 tempFunc(); // window
+
+function foo() {
+  console.dir(this);
+}
+// 함수 foo 선언
+
+foo();
+// window, 일반 함수로써 호출하였으므로 전역 객체인 window 출력
+
+const obj = { foo };
+obj.foo();
+// obj, 메소드로써 호출하였으므로 , foo 를 호출한 객체인 obj 를 출력
+
+new foo();
+// foo{} , 생성자로써 호출하였으므로, 생성자로써 생성할 객체인 foo {} 를 출력
+
+const bar = { name: "bar" };
+foo.call(bar); // bar
+foo.apply(bar); // bar
+foo.bind(bar)(); // bar , Function.prototype.apply/bind/call 에 의한 간접호출로, bar 출력

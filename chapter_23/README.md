@@ -10,3 +10,4 @@
 ## 실행 컨텍스트 흐름
 
 1. [전역 객체 생성](./generate_global_object.md)
+2. [전역 코드 평가](./global_code_evaluation.md)

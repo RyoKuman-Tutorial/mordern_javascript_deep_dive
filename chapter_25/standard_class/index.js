@@ -6,7 +6,7 @@ const SampleClass3 = class MyClass {}; // 기명 클래스 표현식
 class Person {
   constructor(name) {
     // 해당 클래스의 생성자
-    this.name = name; // 프로퍼티
+    this.name = name; // 인스턴스 프로퍼티
     Person.staticProps = "static"; // 정적 프로퍼티
   }
 

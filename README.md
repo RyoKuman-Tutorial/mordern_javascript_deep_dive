@@ -20,7 +20,7 @@
 - [22장](./chapter_22/README.md)
 - [23장](./chapter_23/README.md)
 - [24장](./chapter_24/index.js)
-- [25장](./chapter_25/README.md)
+- [25장](./chapter_25/index.js)
   <!-- - [26장]() -->
   <!-- - [27장]() -->
   <!-- - [28장]() -->

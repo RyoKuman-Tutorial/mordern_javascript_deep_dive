@@ -17,11 +17,14 @@ class Person {
 
   static sayHello() {
     // 정적 메소드
+    // 정적 메소드는 프로토타입이 아닌, 클래스 자체에 속해있는 메소드이다.
     console.log("Hello!");
   }
 }
 
 const me = new Person("Lee");
-console.log(me.name);
+
 me.sayHi();
+console.log(me.name);
+
 Person.sayHello();

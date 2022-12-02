@@ -53,4 +53,4 @@ const shark = new Fish("shark", 10, 10);
 console.log(shark);
 console.log(shark.move());
 console.log(shark.getName());
-console.log(shark.test());
+// console.log(shark.test());

@@ -18,8 +18,6 @@ const arr5 = new Array(10); // length = 10, 요소가 1개이며 숫자면 해�
 const arr6 = new Array({}); // length = 1, 요소가 1개이지만, 숫자가 아닌 경우, 해당 요소를 갖는 배열 생성
 console.log(arr4, arr5, arr6);
 
-ㅊ;
-
 const arr8 = Array.from({ length: 2, 1: "b" }); // [ empty , 'b' ] , 유사 배열 객체를 전달
 const arr9 = Array.from("hello"); // [ 'h', 'e', 'l', 'l', 'o'  ] , 이터러블 객체 전달
 console.log(arr8, arr9);
@@ -28,3 +26,10 @@ const arrMaker = (a, b) => b;
 const arr10 = Array.from({ length: 3 }, (a, i) => i); // [ 0, 1, 2 ], 두번째 요소로 함수 전달
 const arr11 = Array.from({ length: 3 }, arrMaker); // [ 0, 1, 2 ], 두번째 요소로 함수 전달
 console.log(arr10, arr11);
+
+const arr12 = [];
+arr12[0] = 1;
+arr12["foo"] = 2;
+arr12[1.1] = 3; // index 는 꼭 숫자일 필요는 없다.
+
+console.log(arr12.length); // 1 ,length 는 index 가 숫자인 값만을 센다.

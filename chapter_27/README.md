@@ -53,8 +53,8 @@ new Array 와 사용법이 거의 같다.<br/>
 ### Array.from
 
 ```js
-const arr8 = Array.from({ length: 2, 1: "b" }); // [ empty , 'b' ] , 유사 배열 객체를 전달
-const arr9 = Array.from("hello"); // [ 'h', 'e', 'l', 'l', 'o'  ] , 이터러블 객체 전달
+const arr1 = Array.from({ length: 2, 1: "b" }); // [ empty , 'b' ] , 유사 배열 객체를 전달
+const arr2 = Array.from("hello"); // [ 'h', 'e', 'l', 'l', 'o'  ] , 이터러블 객체 전달
 ```
 
 요소를 두개까지 받을 수 있으며,<br/>
@@ -62,12 +62,48 @@ const arr9 = Array.from("hello"); // [ 'h', 'e', 'l', 'l', 'o'  ] , 이터러블
 
 ```js
 const arrMaker = (a, b) => b;
-const arr10 = Array.from({ length: 3 }, (a, i) => i); // [ 0, 1, 2 ], 두번째 요소로 함수 전달
-const arr11 = Array.from({ length: 3 }, arrMaker); // [ 0, 1, 2 ], 두번째 요소로 함수 전달
+const arr3 = Array.from({ length: 3 }, (a, i) => i); // [ 0, 1, 2 ], 두번째 요소로 함수 전달
+const arr4 = Array.from({ length: 3 }, arrMaker); // [ 0, 1, 2 ], 두번째 요소로 함수 전달
 ```
 
 두번째 요소로 함수를 전달 할 수 있으며, 해당 함수의 리턴값을 배열에 할당시킨다.<br/>
 
 ===
 
-##
+## 요소의 삭제
+
+### delete
+
+```js
+const arr = [1, 2, 3];
+delete arr[2]; // [ 1, 2, empty ], length = 3
+```
+
+array 또한 객체이므로, delete 를 통해 요소를 삭제 할 수있다.<br/>
+하지만 delete 를 사용한 경우, 해당 위치에 empty 가 남는다.<br/>
+즉, length 값이 변하지 않는다.<br/>
+
+===
+
+### Array.prototype.splice
+
+```js
+const arr = [1, 2, 3];
+arr.splice(1, 2); // [ 1 ], length = 1
+```
+
+Array.prototype.splice 를 사용하면,<br/>
+요소를 삭제하며, length 의 값도 변화시킬 수 있다.<br/>
+
+===
+
+### length
+
+```js
+const arr = [1, 2, 3];
+arr.length = 2; // [ 1 ,2 ]
+arr.length = 3; // [ 1 ,2 ,empty ]
+```
+
+length 값을 이용하면,<br/>
+요소를 삭제 가능하다.<br/>

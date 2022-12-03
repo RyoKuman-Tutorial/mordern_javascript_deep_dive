@@ -33,3 +33,8 @@ arr12["foo"] = 2;
 arr12[1.1] = 3; // index 는 꼭 숫자일 필요는 없다.
 
 console.log(arr12.length); // 1 ,length 는 index 가 숫자인 값만을 센다.
+
+const arr13 = [1, 2, 3];
+delete arr13[2]; // [ 1, 2 ,empty ]
+console.log(arr13, arr13.length); // [ 1, 2 ,empty ] , 3
+arr13.splice(0, 1); // [ 2 ,empty ]

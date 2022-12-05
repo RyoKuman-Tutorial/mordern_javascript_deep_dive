@@ -42,3 +42,24 @@ const iterable = {
 
 이러한 규약을 이터레이터 프로토콜이라 하며, 이터레이터 프로토콜을 준수한 객체르르 이터레이터라 한다. <br/>
 이터레이터는 이터러블의 요소를 탐색하기 위한 포인터 역할을 한다. <br/>
+
+## for...of
+
+for...in 문은 [[enumable]] 이 true 인 프로퍼티를 순회하며, 열거한다. <br/>
+이 때 키값이 Symbol인 값은 열거하지 않는다. <br/>
+하지만 for...of 는 iterator 의 반환값인 next()로 인한 반환값 <br/>
+iterator result 의 done 을 참고하여, 값을 열거한다.
+
+```js
+const iterable = [1, 2, 3];
+const iterator = iterable[Symbol.iterator]();
+
+while (true) {
+  const rest = iterator.next();
+  if (rest.done) break;
+  const item = rest.value;
+  console.log(item);
+}
+```
+
+##

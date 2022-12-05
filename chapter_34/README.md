@@ -61,5 +61,3 @@ while (true) {
   console.log(item);
 }
 ```
-
-##

@@ -19,3 +19,15 @@ const symbolFor2 = Symbol.keyFor(symbol);
 console.log(symbol === symbolFor1); // false
 console.log(symbol === symbolFor2); // false
 console.log(symbolFor1 === symbolFor2); // true
+
+const obj = {
+  [Symbol.for("hello")]: 1,
+};
+
+for (const prop in obj) console.log("prop is : " + prop); // 아무것도 출력되지 않음,
+console.log(Object.getOwnPropertyNames(obj)); // []
+console.log(Object.keys(obj)); // []
+
+console.log(Object.getOwnPropertyDescriptors(obj)); // 심벌 확인 가능
+console.log(Object.getOwnPropertySymbols(obj)); // 심벌 확인 가능
+console.log(obj); // 심벌 확인 가능
